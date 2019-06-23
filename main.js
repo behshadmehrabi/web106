@@ -1,30 +1,53 @@
-var tasks =[
-    "Eating breakfast",
-    "Reading tasks",
-    "Visiting customers",
-    "Following projects",
-    "Preparing KPI Report",
-    "Eating launch",
-   "Presentations preparation",
-   "Meeting with managers",
-   "Daily report preparation",
-   "Reading new documents" 
-    ];
+var answer = prompt("Please select :\nRock  Paper  Scissor ?");
+answer = answer.toUpperCase();
+var computer = Math.floor(Math.random()*3);
 
-    var stat=["done","in progress","to do"];
-  
-for(var x in tasks){
-    console.log(x);
-    console.log(tasks[x]);
-  }
 
-var selectask = prompt("please enter task number from (1-10):\n1- Eating breakfast\n2- Reading tasks\n3- Visiting customers\n4- Following projects\n5- Preparing KPI Report\n6- Eating launch\n7- Presentations preparation\n8- Meeting with managers\n9- Daily report preparation\n10- Reading new documents");
-var selectstat = prompt("selected task is: " +tasks[selectask-1]+ "\n please select Status(1-3) :\n 1-done  2-in progress  3-to do");
-selectask = Number(selectask);
-selectstat = Number(selectstat);
 
-console.log(tasks[selectask-1]+" Status is "+stat[selectstat-1])
-alert(tasks[selectask-1]+" Status is "+stat[selectstat-1])
+switch(computer){
+    case 0 : computer = "ROCK";
+    break;
+    case 1 : computer = "PAPER";
+    break;
+    case 2 : computer = "SCISSOR";
+    break;
+    
+}
+
+if(answer == computer){
+    document.getElementById("content").innerHTML = "You and Computer both selected "+computer+" Please try again";
+}
+else if(answer == "ROCK"){
+    if(computer == "PAPER"){
+        result = " Sorry You Lose! "
+    }
+    else{
+        result = " Congratulation You win!"
+    }
+}
+else if(answer == "PAPER"){
+    if(computer == "SCISSOR"){
+        result = " Sorry You Lose! "
+    }
+    else{
+        result = " Congratulation You win! "
+    }
+}
+else if(answer == "SCISSOR"){
+    if(computer == "ROCK"){
+        result = " Sorry You Lose! "
+    }
+    else{
+        result = " Congratulation You win! "
+    }
+}
+else{
+    alert("entry is not valid! please try again");
+}
+
+
+
+ document.getElementById("content").innerHTML = "You  selected "+answer+" and computer selected "+computer+"<br>"+result;
 
 
 

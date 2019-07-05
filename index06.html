@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pointer</title>
+
+    <style>
+        #display{
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+        <input type="text" id="display" ><br><br>
+    <input type="text" id="width" placeholder="width(px)">
+    <input type="text" id="height" placeholder="height(px)">
+    <div id="Categories"></div>
+    <h5>Categories</h5>
+    <button type="button" onclick="Changes(this)">ANIMALS</button>
+    <button type="button" onclick="Changes(this)">ARCHITECTURE</button>
+    <button type="button" onclick="Changes(this)">NATURE</button>
+    <button type="button" onclick="Changes(this)">PEOPLE</button>
+    <button type="button" onclick="Changes(this)">TECH</button>
+    <div id="Filters">
+            <h5>Filters</h5>  
+            <button type="button" onclick="changefilter(this)">GRAYSCALE</button>
+            <button type="button" onclick="changefilter(this)">SEPIA</button><br><br> 
+    </div> 
+    
+    <button type="button" onclick="generate()">Generate Image</button>
+    <div id="wrapper">
+        <img id="cImage">
+    </div>
+
+    <script src="./main06.js"></script>
+</body>
+</html>

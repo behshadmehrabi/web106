@@ -45,7 +45,7 @@ Guess.addEventListener('click',function(){
     console.log(usel);
     console.log(ans);
     for(var i = 0 ; i < ans.length ; i++){
-        if(ans[i].toUpperCase()==usel[i].toUpperCase()){
+        if(ans[i]==usel[i]){
             answer+=ans[i];
        }
        else{
